@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
-const mongoURI = "mongodb://localhost:27017" + "/todo";
-
+const mongoURI =
+  "mongodb+srv://anmol53:anmol53@todocluster.4mru3.mongodb.net/todo?retryWrites=true&w=majority";
 mongoose
   .connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {

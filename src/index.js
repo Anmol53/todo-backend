@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(
   cors({
     credentials: true,
-    origin: "http://localhost:3000",
+    origin: "https://dark-todo.herokuapp.com/",
   })
 );
 app.use(
@@ -231,6 +231,10 @@ app.get("/todo", AuthMW, async (req, res) => {
       message: "The server has encountered an error.",
     });
   }
+});
+
+app.get("/", (req, res) => {
+  res.send("Server Running");
 });
 
 app.listen(9999, () => console.log("Server is running at port #9999"));
