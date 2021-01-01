@@ -237,4 +237,6 @@ app.get("/", (req, res) => {
   res.send("Server Running");
 });
 
-app.listen(9999, () => console.log("Server is running at port #9999"));
+app.listen(process.env.PORT, () =>
+  console.log(`Server is running at port ${process.env.PORT}`)
+);
